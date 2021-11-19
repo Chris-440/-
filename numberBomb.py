@@ -21,11 +21,12 @@ def guessNum(start,end,t):
     guessNum(start,end,t)
 
 def init():
+    #程序产生的数据是追加输入，所以要先删除上次运行程序留下的数据。这里是Linux下的命令。如果是windows系统，酌情修改
     os.system("rm -f data.csv")
     os.system("rm -f res.dat")
 
 def dealData(counters,target):
-    #判断甲乙两人的胜负情况，进行的局数，并封装为字符串
+    #判断甲乙两人的胜负情况，进行的局数，并封装为字典
     x1=x2=0  #x1 x2分别代表甲和乙的胜负局数
     for i in counters:
         if i%2:
