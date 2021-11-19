@@ -1,6 +1,9 @@
 import random
 import matplotlib.pyplot as plt
 import os
+import showData
+
+
 
 counter=0
 
@@ -40,7 +43,7 @@ def dealData(counters,target):
 def main():
     init()
     global counter
-    n=10000000
+    n=100
     counters=[]
     results=[]
     
@@ -65,7 +68,7 @@ def main():
         for i in results:
             file.write(str(i)+'\n')
 
-    showDat()
+    showData.showDat()
 
 
 if __name__ == '__main__':
